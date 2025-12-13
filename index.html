@@ -1,186 +1,263 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zannetti Transportes | Fretamento de Mudanças</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Zavatti Transportes | Fretamento de Mudan&ccedil;as</title>
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/truck.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/truck.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#5089A5',
+            ink: '#0F1400',
+            sky: '#F6FBFD',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
 </head>
-<body>
-  <header class="navbar">
-    <div class="container nav-content">
-      <div class="logo">Zannetti Transportes</div>
-      <nav class="nav-links">
-        <a href="#inicio">Início</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a href="#orcamento">Contato</a>
-      </nav>
+
+<body class="font-sans text-ink bg-white antialiased">
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-black/5 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="relative flex items-center justify-between py-4 gap-3 sm:gap-4">
+        <a href="#inicio" class="flex items-center gap-3 text-lg font-bold tracking-tight hover:text-brand transition">
+          <img src="assets/logo.png" alt="Zannetti Transportes" class="h-12 w-auto">
+          <span class="sr-only">Zavatti Transportes</span>
+        </a>
+        <button id="menuToggle"
+          class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-black/10 bg-white text-ink shadow-sm hover:bg-brand/10 transition"
+          aria-label="Abrir menu" aria-expanded="false" type="button">
+          <svg data-icon="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg data-icon="close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+        <nav id="navLinks"
+          class="absolute left-0 right-0 top-full z-30 flex flex-col sm:relative sm:left-auto sm:right-auto sm:top-auto sm:z-auto sm:flex-row flex-wrap sm:flex-nowrap gap-2 text-sm font-semibold text-ink/80 w-full sm:w-auto sm:ml-auto transition-all duration-200 ease-out origin-top max-h-0 overflow-hidden opacity-0 -translate-y-2 pointer-events-none sm:max-h-none sm:opacity-100 sm:translate-y-0 sm:pointer-events-auto sm:bg-transparent">
+          <a class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
+            href="#inicio">In&iacute;cio</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
+            href="#beneficios">Benef&iacute;cios</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
+            href="#como-funciona">Como funciona</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
+            href="#depoimentos">Depoimentos</a>
+          <a class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
+            href="#orcamento">Contato</a>
+        </nav>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="hero section" id="inicio">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1>Fretamento de mudanças com segurança e pontualidade</h1>
-          <p class="subtitle">Atendemos Jundiaí e região com equipe especializada, veículos preparados e atendimento rápido para sua mudança residencial ou comercial.</p>
-          <div class="hero-actions">
-            <a class="btn-primary" href="#orcamento">Solicitar orçamento agora</a>
-            <ul class="hero-benefits">
-              <li>Segurança e cuidado em cada etapa</li>
+    <section id="inicio" class="bg-gradient-to-br from-brand/10 via-white to-brand/5 pt-20 pb-16">
+      <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-[1.2fr_0.8fr] items-center gap-10">
+        <div class="space-y-6">
+          <div class="space-y-4">
+            <p
+              class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-brand/10 rounded-full px-3 py-1">
+              Fretamento seguro em Jundia&iacute; e regi&atilde;o</p>
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight">Fretamento de mudan&ccedil;as com seguran&ccedil;a
+              e pontualidade</h1>
+            <p class="text-lg text-ink/80 max-w-2xl">Atendemos Jundia&iacute; e regi&atilde;o com equipe especializada,
+              ve&iacute;culos preparados e atendimento r&aacute;pido para sua mudan&ccedil;a residencial ou comercial.
+            </p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-wrap items-center gap-3">
+              <a class="inline-flex items-center justify-center bg-brand text-white px-5 py-3 rounded-full text-lg font-semibold shadow hover:bg-brand/90 transition"
+                href="#orcamento">Solicitar or&ccedil;amento agora</a>
+            </div>
+            <ul class="list-disc list-inside text-ink/80 space-y-1">
+              <li>Seguran&ccedil;a e cuidado em cada etapa</li>
               <li>Pontualidade e compromisso com prazos</li>
-              <li>Suporte ágil via telefone e WhatsApp</li>
+              <li>Suporte &aacute;gil via telefone e WhatsApp</li>
             </ul>
           </div>
         </div>
-        <div class="hero-card">
-          <h3>Transporte sem preocupação</h3>
-          <p>Equipe treinada, embalagem cuidadosa e monitoramento para sua mudança chegar no horário combinado.</p>
-          <a class="btn-primary secondary" href="#orcamento">Quero orçar minha mudança</a>
+        <div class="rounded-2xl border border-brand/20 bg-sky shadow-lg p-6 space-y-4">
+          <div
+            class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-white rounded-full px-3 py-1 border border-brand/20">
+            Planejado do in&iacute;cio ao fim</div>
+          <h3 class="text-2xl font-bold">Transporte sem preocupa&ccedil;&atilde;o</h3>
+          <p class="text-ink/80">Equipe treinada, embalagem cuidadosa e monitoramento para sua mudan&ccedil;a chegar no
+            hor&aacute;rio combinado.</p>
+          <a class="inline-flex items-center justify-center bg-white text-brand border border-brand/30 px-4 py-3 rounded-xl font-semibold hover:border-brand hover:text-ink transition w-full"
+            href="#orcamento">Quero or&ccedil;ar minha mudan&ccedil;a</a>
         </div>
       </div>
     </section>
 
-    <section class="section benefits" id="beneficios">
-      <div class="container">
-        <h2>Por que escolher a Zannetti Transportes?</h2>
-        <div class="grid cards">
-          <article class="card">
-            <div class="icon-circle"></div>
-            <h3>Equipe especializada</h3>
-            <p>Profissionais experientes cuidando de cada item com atenção e respeito.</p>
-          </article>
-          <article class="card">
-            <div class="icon-circle"></div>
-            <h3>Veículos preparados</h3>
-            <p>Frota equipada para mudanças residenciais e comerciais de todos os portes.</p>
-          </article>
-          <article class="card">
-            <div class="icon-circle"></div>
-            <h3>Atendimento personalizado</h3>
-            <p>Planejamento sob medida, com canais rápidos para tirar dúvidas e ajustar detalhes.</p>
-          </article>
-          <article class="card">
-            <div class="icon-circle"></div>
-            <h3>Pontualidade garantida</h3>
-            <p>Compromisso com prazos para que sua mudança aconteça sem imprevistos.</p>
-          </article>
+    <section id="beneficios" class="py-14">
+      <div class="max-w-6xl mx-auto px-4 space-y-10">
+        <div class="space-y-3 text-center">
+          <p class="text-sm font-semibold text-brand">Por que escolher</p>
+          <h2 class="text-3xl md:text-4xl font-bold">Por que escolher a Zannetti Transportes?</h2>
         </div>
-        <div class="cta-inline">
-          <a class="btn-primary" href="#orcamento">Solicitar orçamento agora</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section steps" id="como-funciona">
-      <div class="container">
-        <h2>Como funciona o fretamento de mudanças</h2>
-        <div class="grid steps-grid">
-          <article class="step">
-            <span class="step-number">1</span>
-            <h3>Solicitação de orçamento</h3>
-            <p>Você envia os detalhes da mudança e nossos consultores retornam rapidamente.</p>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
+            <div class="w-10 h-10 rounded-full bg-brand"></div>
+            <h3 class="text-xl font-semibold">Equipe especializada</h3>
+            <p class="text-ink/80">Profissionais experientes cuidando de cada item com aten&ccedil;&atilde;o e respeito.
+            </p>
           </article>
-          <article class="step">
-            <span class="step-number">2</span>
-            <h3>Avaliação e alinhamento</h3>
-            <p>Definimos o plano de transporte, equipe necessária e a melhor data para você.</p>
+          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
+            <div class="w-10 h-10 rounded-full bg-brand"></div>
+            <h3 class="text-xl font-semibold">Ve&iacute;culos preparados</h3>
+            <p class="text-ink/80">Frota equipada para mudan&ccedil;as residenciais e comerciais de todos os portes.</p>
           </article>
-          <article class="step">
-            <span class="step-number">3</span>
-            <h3>Transporte com segurança</h3>
-            <p>Realizamos a coleta, proteção e entrega da mudança com pontualidade.</p>
+          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
+            <div class="w-10 h-10 rounded-full bg-brand"></div>
+            <h3 class="text-xl font-semibold">Atendimento personalizado</h3>
+            <p class="text-ink/80">Planejamento sob medida, com canais r&aacute;pidos para tirar d&uacute;vidas e
+              ajustar detalhes.</p>
+          </article>
+          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
+            <div class="w-10 h-10 rounded-full bg-brand"></div>
+            <h3 class="text-xl font-semibold">Pontualidade garantida</h3>
+            <p class="text-ink/80">Compromisso com prazos para que sua mudan&ccedil;a aconte&ccedil;a sem imprevistos.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section testimonials" id="depoimentos">
-      <div class="container">
-        <h2>O que nossos clientes dizem</h2>
-        <div class="grid testimonials-grid">
-          <article class="testimonial">
-            <p>“Equipe super cuidadosa e pontual. Minha mudança foi tranquila do começo ao fim.”</p>
-            <h4>Ana Souza — Jundiaí</h4>
+    <section id="como-funciona" class="py-14 bg-gray-50/70">
+      <div class="max-w-6xl mx-auto px-4 space-y-10">
+        <div class="space-y-2 text-center">
+          <p class="text-sm font-semibold text-brand">Passo a passo</p>
+          <h2 class="text-3xl md:text-4xl font-bold">Como funciona o fretamento de mudan&ccedil;as</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand text-white font-bold">1</span>
+            <h3 class="text-xl font-semibold">Solicita&ccedil;&atilde;o de or&ccedil;amento</h3>
+            <p class="text-ink/80">Voc&ecirc; envia os detalhes da mudan&ccedil;a e nossos consultores retornam
+              rapidamente.</p>
           </article>
-          <article class="testimonial">
-            <p>“O atendimento foi rápido e o orçamento justo. Recomendo para mudanças comerciais.”</p>
-            <h4>Ricardo Lima — Várzea Paulista</h4>
+          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand text-white font-bold">2</span>
+            <h3 class="text-xl font-semibold">Avalia&ccedil;&atilde;o e alinhamento</h3>
+            <p class="text-ink/80">Definimos o plano de transporte, equipe necess&aacute;ria e a melhor data para
+              voc&ecirc;.</p>
           </article>
-          <article class="testimonial">
-            <p>“Chegaram no horário combinado e protegeram todos os móveis. Serviço excelente.”</p>
-            <h4>Mariana Costa — Campo Limpo Paulista</h4>
+          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand text-white font-bold">3</span>
+            <h3 class="text-xl font-semibold">Transporte com seguran&ccedil;a</h3>
+            <p class="text-ink/80">Realizamos a coleta, prote&ccedil;&atilde;o e entrega da mudan&ccedil;a com
+              pontualidade.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section contact" id="orcamento">
-      <div class="container">
-        <div class="contact-header">
-          <h2>Peça seu orçamento de mudança</h2>
-          <p>Responda ao formulário e retornaremos rapidamente com uma proposta sob medida para você.</p>
+    <section id="depoimentos" class="py-14">
+      <div class="max-w-6xl mx-auto px-4 space-y-10">
+        <div class="space-y-2 text-center">
+          <p class="text-sm font-semibold text-brand">Clientes satisfeitos</p>
+          <h2 class="text-3xl md:text-4xl font-bold">O que nossos clientes dizem</h2>
         </div>
-        <form class="contact-form">
-          <div class="form-grid">
-            <label>
-              Nome completo
-              <input type="text" name="nome" placeholder="Seu nome" required>
-            </label>
-            <label>
-              Telefone / WhatsApp
-              <input type="tel" name="telefone" placeholder="(11) 99999-9999" required>
-            </label>
-            <label>
-              E-mail
-              <input type="email" name="email" placeholder="seuemail@exemplo.com" required>
-            </label>
-            <label>
-              Cidade de origem
-              <input type="text" name="origem" placeholder="Cidade/ Bairro" required>
-            </label>
-            <label>
-              Cidade de destino
-              <input type="text" name="destino" placeholder="Cidade/ Bairro" required>
-            </label>
-            <label>
-              Data desejada da mudança
-              <input type="date" name="data" required>
-            </label>
-          </div>
-          <label class="full-width">
-            Detalhes da mudança
-            <textarea name="mensagem" rows="4" placeholder="Quantidade de cômodos, itens especiais, acessos..."></textarea>
-          </label>
-          <div class="form-action">
-            <button type="submit" class="btn-primary">Enviar pedido de orçamento</button>
-          </div>
-        </form>
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
+            <p class="italic text-ink/80">"Equipe super cuidadosa e pontual. Minha mudan&ccedil;a foi tranquila do
+              come&ccedil;o ao fim."</p>
+            <h4 class="text-sm font-semibold text-ink/70">Ana Souza - Jundia&iacute;</h4>
+          </article>
+          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
+            <p class="italic text-ink/80">"O atendimento foi r&aacute;pido e o or&ccedil;amento justo. Recomendo para
+              mudan&ccedil;as comerciais."</p>
+            <h4 class="text-sm font-semibold text-ink/70">Ricardo Lima - V&aacute;rzea Paulista</h4>
+          </article>
+          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
+            <p class="italic text-ink/80">"Chegaram no hor&aacute;rio combinado e protegeram todos os m&oacute;veis.
+              Servi&ccedil;o excelente."</p>
+            <h4 class="text-sm font-semibold text-ink/70">Mariana Costa - Campo Limpo Paulista</h4>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-content">
-      <div>
-        <h3>Zannetti Transportes</h3>
-        <p>Fretamento de mudanças residenciais e comerciais com segurança e pontualidade.</p>
+  <footer class="bg-gray-100 py-10">
+    <div class="max-w-6xl mx-auto px-4 grid gap-6 md:grid-cols-3 text-sm text-ink/80">
+      <div class="space-y-2">
+        <h3 class="text-lg font-bold text-ink">Zannetti Transportes</h3>
+        <p>Fretamento de mudan&ccedil;as residenciais e comerciais com seguran&ccedil;a e pontualidade.</p>
       </div>
-      <div>
-        <h4>Contato</h4>
+      <div class="space-y-2">
+        <h4 class="text-base font-semibold text-ink">Contato</h4>
         <p>Telefone/WhatsApp: (11) 90000-0000</p>
         <p>E-mail: contato@zannettitransportes.com.br</p>
-        <p>Atendimento em Jundiaí e região</p>
+        <p>Atendimento em Jundia&iacute; e regi&atilde;o</p>
       </div>
-      <div>
-        <h4>Direitos</h4>
+      <div class="space-y-2">
+        <h4 class="text-base font-semibold text-ink">Direitos</h4>
         <p>&copy; 2024 Zannetti Transportes. Todos os direitos reservados.</p>
       </div>
     </div>
   </footer>
 
-  <a class="floating-btn" href="#orcamento">Pedir orçamento</a>
+  <a class="fixed right-6 bottom-6 inline-flex items-center justify-center bg-brand text-white px-5 py-3 rounded-full text-sm font-semibold shadow-lg hover:bg-brand/90 transition"
+    href="#orcamento">Pedir or&ccedil;amento</a>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    const openIcon = menuToggle?.querySelector('[data-icon="open"]');
+    const closeIcon = menuToggle?.querySelector('[data-icon="close"]');
+
+    function closeMenu() {
+      navLinks.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto', 'max-h-96', 'border', 'border-black/5', 'shadow', 'bg-white', 'p-3');
+      navLinks.classList.add('opacity-0', '-translate-y-2', 'pointer-events-none', 'max-h-0', 'overflow-hidden');
+      openIcon?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+      menuToggle?.setAttribute('aria-expanded', 'false');
+    }
+
+    function openMenu() {
+      navLinks.classList.remove('opacity-0', '-translate-y-2', 'pointer-events-none', 'max-h-0', 'overflow-hidden');
+      navLinks.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto', 'max-h-96', 'border', 'border-black/5', 'shadow', 'bg-white', 'p-3');
+      openIcon?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+      menuToggle?.setAttribute('aria-expanded', 'true');
+    }
+
+    menuToggle?.addEventListener('click', () => {
+      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Fecha ao redimensionar para desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 640) {
+        closeMenu();
+      }
+    });
+  </script>
 </body>
+
 </html>
