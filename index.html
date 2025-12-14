@@ -29,7 +29,10 @@
   </script>
 </head>
 
-<body class="font-sans text-ink bg-gradient-to-b from-white via-sky to-brand/5 antialiased">
+<body class="font-sans text-ink bg-gradient-to-br from-white via-sky to-brand/20 antialiased relative overflow-x-hidden">
+  <div aria-hidden="true"
+    class="pointer-events-none fixed inset-0 -z-10 opacity-70"
+    style="background: radial-gradient(circle at 20% 20%, rgba(80, 137, 165, 0.18), transparent 35%), radial-gradient(circle at 80% 10%, rgba(15, 20, 0, 0.08), transparent 30%), radial-gradient(circle at 70% 70%, rgba(80, 137, 165, 0.12), transparent 25%);"></div>
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-black/5 shadow-sm">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative flex items-center justify-between py-4 gap-3 sm:gap-4">
@@ -67,67 +70,112 @@
   </header>
 
   <main>
-    <section id="inicio" class="bg-gradient-to-br from-brand/10 via-white to-brand/5 pt-20 pb-16">
+    <section id="inicio" class="relative bg-gradient-to-br from-brand/15 via-white to-brand/10 pt-20 pb-18 overflow-hidden">
+      <div aria-hidden="true"
+        class="absolute -left-28 top-10 h-64 w-64 rounded-full bg-brand/20 blur-3xl"></div>
+      <div aria-hidden="true"
+        class="absolute right-0 -bottom-20 h-72 w-72 rounded-full bg-brand/30 blur-3xl"></div>
       <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-[1.2fr_0.8fr] items-center gap-10">
         <div class="space-y-6">
           <div class="space-y-4">
             <p
-              class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-brand/10 rounded-full px-3 py-1">
+              class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-white/70 rounded-full px-3 py-1 shadow-sm backdrop-blur">
               Fretamento seguro em Jundia&iacute; e regi&atilde;o</p>
-            <h1 class="text-4xl md:text-5xl font-bold leading-tight">Fretamento de mudan&ccedil;as com seguran&ccedil;a
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight text-ink">Fretamento de mudan&ccedil;as com seguran&ccedil;a
               e pontualidade</h1>
             <p class="text-lg text-ink/80 max-w-2xl">Atendemos Jundia&iacute; e regi&atilde;o com equipe especializada,
               ve&iacute;culos preparados e atendimento r&aacute;pido para sua mudan&ccedil;a residencial ou comercial.
             </p>
           </div>
-          <div class="flex flex-col gap-4">
-
+          <div class="flex flex-col gap-5">
+            <div class="grid sm:grid-cols-3 gap-3">
+              <div class="rounded-xl border border-brand/20 bg-white/80 shadow-sm p-3">
+                <p class="text-xs uppercase font-bold text-brand/80">+300</p>
+                <p class="text-sm text-ink/80">Mudan&ccedil;as conclu&iacute;das</p>
+              </div>
+              <div class="rounded-xl border border-brand/20 bg-white/80 shadow-sm p-3">
+                <p class="text-xs uppercase font-bold text-brand/80">Equipe</p>
+                <p class="text-sm text-ink/80">Treinada e uniformizada</p>
+              </div>
+              <div class="rounded-xl border border-brand/20 bg-white/80 shadow-sm p-3">
+                <p class="text-xs uppercase font-bold text-brand/80">Monitoramento</p>
+                <p class="text-sm text-ink/80">Hor&aacute;rios cumpridos</p>
+              </div>
+            </div>
             <ul class="list-disc list-inside text-ink/80 space-y-1">
               <li>Seguran&ccedil;a e cuidado em cada etapa</li>
               <li>Pontualidade e compromisso com prazos</li>
               <li>Suporte &aacute;gil via telefone e WhatsApp</li>
             </ul>
+            <div class="flex flex-wrap gap-3">
+              <a class="inline-flex items-center gap-2 bg-brand text-white px-5 py-3 rounded-full font-semibold shadow-lg shadow-brand/30 hover:shadow-brand/40 hover:-translate-y-0.5 transition"
+                href="#orcamento">
+                Quero or&ccedil;ar minha mudan&ccedil;a
+              </a>
+              <a class="inline-flex items-center gap-2 bg-white text-ink border border-brand/30 px-5 py-3 rounded-full font-semibold shadow-sm hover:border-brand hover:bg-white/80 transition"
+                href="#beneficios">
+                Ver diferenciais
+              </a>
+            </div>
           </div>
         </div>
-        <div class="rounded-2xl border border-brand/20 bg-sky shadow-lg p-6 space-y-4">
+        <div class="rounded-2xl border border-brand/20 bg-white/80 shadow-xl p-6 space-y-4 backdrop-blur">
           <div
-            class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-white rounded-full px-3 py-1 border border-brand/20">
+            class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-brand/10 rounded-full px-3 py-1 border border-brand/20">
             Planejado do in&iacute;cio ao fim</div>
           <h3 class="text-2xl font-bold">Transporte sem preocupa&ccedil;&atilde;o</h3>
           <p class="text-ink/80">Equipe treinada, embalagem cuidadosa e monitoramento para sua mudan&ccedil;a chegar no
             hor&aacute;rio combinado.</p>
-          <a class="inline-flex items-center justify-center bg-white text-brand border border-brand/30 px-4 py-3 rounded-xl font-semibold hover:border-brand hover:text-ink transition w-full"
+          <div class="grid grid-cols-2 gap-3 text-sm">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-brand"></span>
+              Embalagem refor&ccedil;ada
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-brand"></span>
+              Equipe pontual
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-brand"></span>
+              Cargas protegidas
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-brand"></span>
+              Atualiza&ccedil;&otilde;es r&aacute;pidas
+            </div>
+          </div>
+          <a class="inline-flex items-center justify-center bg-brand text-white px-4 py-3 rounded-xl font-semibold hover:bg-brand/90 transition w-full shadow shadow-brand/30"
             href="#orcamento">Quero or&ccedil;ar minha mudan&ccedil;a</a>
         </div>
       </div>
     </section>
 
-    <section id="beneficios" class="py-14">
+    <section id="beneficios" class="py-14 bg-gradient-to-b from-white via-white to-brand/5">
       <div class="max-w-6xl mx-auto px-4 space-y-10">
         <div class="space-y-3 text-center">
           <p class="text-sm font-semibold text-brand">Por que escolher</p>
           <h2 class="text-3xl md:text-4xl font-bold">Por que escolher a Zavatti Transportes?</h2>
         </div>
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
-            <div class="w-10 h-10 rounded-full bg-brand"></div>
+          <article class="rounded-2xl border border-brand/20 shadow-md p-5 bg-white/90 space-y-3">
+            <div class="w-10 h-10 rounded-full bg-brand shadow-brand/30 shadow"></div>
             <h3 class="text-xl font-semibold">Equipe especializada</h3>
             <p class="text-ink/80">Profissionais experientes cuidando de cada item com aten&ccedil;&atilde;o e respeito.
             </p>
           </article>
-          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
-            <div class="w-10 h-10 rounded-full bg-brand"></div>
+          <article class="rounded-2xl border border-brand/20 shadow-md p-5 bg-white/90 space-y-3">
+            <div class="w-10 h-10 rounded-full bg-brand shadow-brand/30 shadow"></div>
             <h3 class="text-xl font-semibold">Ve&iacute;culos preparados</h3>
             <p class="text-ink/80">Frota equipada para mudan&ccedil;as residenciais e comerciais de todos os portes.</p>
           </article>
-          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
-            <div class="w-10 h-10 rounded-full bg-brand"></div>
+          <article class="rounded-2xl border border-brand/20 shadow-md p-5 bg-white/90 space-y-3">
+            <div class="w-10 h-10 rounded-full bg-brand shadow-brand/30 shadow"></div>
             <h3 class="text-xl font-semibold">Atendimento personalizado</h3>
             <p class="text-ink/80">Planejamento sob medida, com canais r&aacute;pidos para tirar d&uacute;vidas e
               ajustar detalhes.</p>
           </article>
-          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3">
-            <div class="w-10 h-10 rounded-full bg-brand"></div>
+          <article class="rounded-2xl border border-brand/20 shadow-md p-5 bg-white/90 space-y-3">
+            <div class="w-10 h-10 rounded-full bg-brand shadow-brand/30 shadow"></div>
             <h3 class="text-xl font-semibold">Pontualidade garantida</h3>
             <p class="text-ink/80">Compromisso com prazos para que sua mudan&ccedil;a aconte&ccedil;a sem imprevistos.
             </p>
