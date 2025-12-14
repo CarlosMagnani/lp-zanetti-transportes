@@ -67,37 +67,45 @@
   </header>
 
   <main>
-    <section id="inicio" class="bg-gradient-to-br from-brand/10 via-white to-brand/5 pt-20 pb-16">
-      <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-[1.2fr_0.8fr] items-center gap-10">
-        <div class="space-y-6">
-          <div class="space-y-4">
-            <p
-              class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-brand/10 rounded-full px-3 py-1">
-              Fretamento seguro em Jundia&iacute; e regi&atilde;o</p>
-            <h1 class="text-4xl md:text-5xl font-bold leading-tight">Fretamento de mudan&ccedil;as com seguran&ccedil;a
-              e pontualidade</h1>
-            <p class="text-lg text-ink/80 max-w-2xl">Atendemos Jundia&iacute; e regi&atilde;o com equipe especializada,
-              ve&iacute;culos preparados e atendimento r&aacute;pido para sua mudan&ccedil;a residencial ou comercial.
-            </p>
-          </div>
-          <div class="flex flex-col gap-4">
-
-            <ul class="list-disc list-inside text-ink/80 space-y-1">
-              <li>Seguran&ccedil;a e cuidado em cada etapa</li>
-              <li>Pontualidade e compromisso com prazos</li>
-              <li>Suporte &aacute;gil via telefone e WhatsApp</li>
-            </ul>
-          </div>
+    <section id="inicio" class="relative overflow-hidden bg-gradient-to-br from-brand/10 via-white to-brand/5 pt-20 pb-16">
+      <div aria-hidden="true" class="absolute inset-0 bg-[url('img/truck.jpg')] bg-cover bg-center opacity-40"></div>
+      <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-brand/10"></div>
+      <div class="relative max-w-6xl mx-auto px-4 grid lg:grid-cols-2 items-start gap-10 z-10">
+        <div class="space-y-4">
+          <p class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-brand/10 rounded-full px-3 py-1">
+            Fretamento seguro em Jundia&iacute; e regi&atilde;o</p>
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight">Fretamento de mudan&ccedil;as com seguran&ccedil;a
+            e pontualidade</h1>
+          <p class="text-lg text-ink/80 max-w-2xl">Atendemos Jundia&iacute; e regi&atilde;o com equipe especializada,
+            ve&iacute;culos preparados e atendimento r&aacute;pido para sua mudan&ccedil;a residencial ou comercial.
+          </p>
         </div>
-        <div class="rounded-2xl border border-brand/20 bg-sky shadow-lg p-6 space-y-4">
-          <div
-            class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-white rounded-full px-3 py-1 border border-brand/20">
-            Planejado do in&iacute;cio ao fim</div>
-          <h3 class="text-2xl font-bold">Transporte sem preocupa&ccedil;&atilde;o</h3>
-          <p class="text-ink/80">Equipe treinada, embalagem cuidadosa e monitoramento para sua mudan&ccedil;a chegar no
-            hor&aacute;rio combinado.</p>
-          <a class="inline-flex items-center justify-center bg-white text-brand border border-brand/30 px-4 py-3 rounded-xl font-semibold hover:border-brand hover:text-ink transition w-full"
-            href="#orcamento">Quero or&ccedil;ar minha mudan&ccedil;a</a>
+        <div class="space-y-5">
+          <div class="rounded-2xl border border-brand/20 bg-white/90 backdrop-blur shadow-lg p-6 space-y-4">
+            <div
+              class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-white rounded-full px-3 py-1 border border-brand/20">
+              Planejado do in&iacute;cio ao fim
+            </div>
+            <h3 class="text-2xl font-bold">Transporte sem preocupa&ccedil;&atilde;o</h3>
+            <p class="text-ink/80">Equipe treinada e monitoramento para sua mudan&ccedil;a chegar no
+              hor&aacute;rio combinado.</p>
+            <a class="inline-flex items-center justify-center bg-white text-brand border border-brand/30 px-4 py-3 rounded-xl font-semibold hover:border-brand hover:text-ink transition w-full"
+              href="#orcamento">Quero or&ccedil;ar minha mudan&ccedil;a</a>
+          </div>
+          <ul class="space-y-3 text-ink/90">
+            <li class="flex items-start gap-3 text-lg">
+              <span aria-hidden="true">🛡️</span>
+              <span>Seguran&ccedil;a e cuidado em cada etapa</span>
+            </li>
+            <li class="flex items-start gap-3 text-lg">
+              <span aria-hidden="true">⏱️</span>
+              <span>Pontualidade e compromisso com prazos</span>
+            </li>
+            <li class="flex items-start gap-3 text-lg">
+              <span aria-hidden="true">📞</span>
+              <span>Suporte &aacute;gil via telefone e WhatsApp</span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -299,7 +307,7 @@
     </div>
   </footer>
 
-  <a class="fixed right-6 bottom-6 inline-flex items-center justify-center gap-2 bg-brand text-white px-5 py-3 rounded-full text-sm font-semibold shadow-lg hover:bg-brand/90 transition"
+  <a class="fixed right-6 bottom-6 inline-flex items-center justify-center gap-2 bg-brand text-white px-5 py-3 rounded-full text-sm font-semibold shadow-lg hover:bg-brand/90 transition z-50"
     href="https://wa.me/5518981950841?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20mudan%C3%A7a" target="_blank" rel="noopener noreferrer">
     Pedir or&ccedil;amento
     <img src="img/whatsapp.png" alt="" class="h-8 w-8">
