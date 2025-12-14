@@ -29,7 +29,7 @@
   </script>
 </head>
 
-<body class="font-sans text-ink bg-white antialiased">
+<body class="font-sans text-ink bg-gradient-to-b from-white via-sky to-brand/5 antialiased">
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-black/5 shadow-sm">
     <div class="max-w-6xl mx-auto px-4">
       <div class="relative flex items-center justify-between py-4 gap-3 sm:gap-4">
@@ -208,22 +208,68 @@
         </div>
       </div>
     </section>
+
+    <section id="orcamento" class="py-14">
+      <div class="max-w-6xl mx-auto px-4">
+        <div
+          class="relative overflow-hidden rounded-3xl border border-brand/20 bg-gradient-to-br from-white via-sky to-brand/10 shadow-lg">
+          <div aria-hidden="true"
+            class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand/20 blur-3xl"></div>
+          <div aria-hidden="true"
+            class="pointer-events-none absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-brand/10 blur-3xl"></div>
+
+          <div class="relative grid gap-8 lg:grid-cols-[1fr_0.9fr] items-center p-6 sm:p-10">
+            <div class="space-y-5">
+              <p
+                class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-brand/10 rounded-full px-3 py-1 w-fit">
+                Or&ccedil;amento r&aacute;pido</p>
+              <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-left">Pe&ccedil;a seu or&ccedil;amento em
+                minutos</h2>
+              <p class="text-ink/80 max-w-xl">Fale com a gente pelo WhatsApp e receba um atendimento &aacute;gil para
+                agendar e tirar d&uacute;vidas.</p>
+
+              <div class="flex flex-col sm:flex-row gap-3">
+                <a class="inline-flex items-center justify-center gap-2 bg-brand text-white px-5 py-3 rounded-full text-base font-semibold shadow hover:bg-brand/90 transition"
+                  href="https://wa.me/5518981950841?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20mudan%C3%A7a"
+                  target="_blank" rel="noopener noreferrer">
+                  Chamar no WhatsApp
+                  <img src="img/whatsapp.png" alt="" class="h-6 w-6" loading="lazy" decoding="async">
+                </a>
+                <a class="inline-flex items-center justify-center bg-white text-ink border border-black/10 px-5 py-3 rounded-full text-base font-semibold shadow-sm hover:border-black/20 hover:bg-white/70 transition"
+                  href="tel:+5518981950841">
+                  Ligar agora
+                </a>
+              </div>
+
+              <p class="text-sm text-ink/70">Atendimento em Jundia&iacute; e regi&atilde;o.</p>
+            </div>
+
+            <div class="relative">
+              <div class="rounded-3xl border border-black/5 bg-white/70 backdrop-blur p-4 shadow-sm">
+                <img src="img/cta_truck.png" alt="Caminh&atilde;o de mudan&ccedil;a Zavatti" width="1536" height="1024"
+                  loading="lazy" decoding="async" class="w-full h-auto rounded-2xl">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer class="bg-gray-100 py-10">
-    <div class="max-w-6xl mx-auto px-4 grid gap-6 md:grid-cols-3 text-sm text-ink/80">
+  <footer class="bg-brand py-10">
+    <div class="max-w-6xl mx-auto px-4 grid gap-6 md:grid-cols-3 text-sm text-white/80">
       <div class="space-y-2">
-        <h3 class="text-lg font-bold text-ink">Zavatti Transportes</h3>
+        <h3 class="text-lg font-bold text-white">Zavatti Transportes</h3>
         <p>Fretamento de mudan&ccedil;as residenciais e comerciais com seguran&ccedil;a e pontualidade.</p>
       </div>
       <div class="space-y-2">
-        <h4 class="text-base font-semibold text-ink">Contato</h4>
+        <h4 class="text-base font-semibold text-white">Contato</h4>
         <p>Telefone/WhatsApp: (18) 9 8195-0841</p>
         <p>E-mail: zavatti@gmail.com</p>
         <p>Atendimento em Jundia&iacute; e regi&atilde;o</p>
       </div>
       <div class="space-y-2">
-        <h4 class="text-base font-semibold text-ink">Direitos</h4>
+        <h4 class="text-base font-semibold text-white">Direitos</h4>
         <p>&copy; <span id="year"></span> Zavatti Transportes. Todos os direitos reservados.</p>
       </div>
     </div>
