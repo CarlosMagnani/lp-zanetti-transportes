@@ -1,358 +1,627 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR" class="scroll-smooth">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zavatti Transportes | Fretamento de Mudan&ccedil;as</title>
-  <link rel="icon" type="image/png" sizes="180x180" href="img/browser_icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/truck.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: '#5089A5',
-            ink: '#0F1400',
-            sky: '#F6FBFD',
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zavatti Transportes | Fretamento de Mudan&ccedil;as</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="180x180"
+      href="img/browser_icon.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/truck.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: "#5089A5",
+              ink: "#0F1400",
+              sky: "#F6FBFD",
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
           },
         },
-      },
-    };
-  </script>
-</head>
+      };
+    </script>
+  </head>
 
-<body class="font-sans text-ink bg-gradient-to-b from-white via-sky to-brand/5 antialiased">
-  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-black/5 shadow-sm">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="relative flex items-center justify-between py-4 gap-3 sm:gap-4">
-        <a href="#inicio" class="flex items-center gap-3 text-lg font-bold tracking-tight hover:text-brand transition">
-          <img src="img/logo.png" alt="Zavatti Transportes" class="h-12 w-auto">
-          <span class="sr-only">Zavatti Transportes</span>
-        </a>
-        <button id="menuToggle"
-          class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-black/10 bg-white text-ink shadow-sm hover:bg-brand/10 transition"
-          aria-label="Abrir menu" aria-expanded="false" type="button">
-          <svg data-icon="open" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <svg data-icon="close" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden" fill="none"
-            viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        <nav id="navLinks"
-          class="absolute left-0 right-0 top-full z-30 flex flex-col sm:relative sm:left-auto sm:right-auto sm:top-auto sm:z-auto sm:flex-row flex-wrap sm:flex-nowrap gap-2 text-sm font-semibold text-ink/80 w-full sm:w-auto sm:ml-auto transition-all duration-200 ease-out origin-top max-h-0 overflow-hidden opacity-0 -translate-y-2 pointer-events-none sm:max-h-none sm:opacity-100 sm:translate-y-0 sm:pointer-events-auto sm:bg-transparent">
-          <a class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
-            href="#inicio">In&iacute;cio</a>
-          <a class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
-            href="#beneficios">Benef&iacute;cios</a>
-          <a class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
-            href="#como-funciona">Como funciona</a>
-          <a class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
-            href="#galeria">Galeria</a>
-          <a class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
-            href="#orcamento">Contato</a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section id="inicio" class="relative overflow-hidden bg-gradient-to-br from-brand/10 via-white to-brand/5 pt-20 pb-16">
-      <div aria-hidden="true" class="absolute inset-0 bg-[url('img/truck.jpg')] bg-cover bg-center opacity-40"></div>
-      <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-brand/10"></div>
-      <div class="relative max-w-6xl mx-auto px-4 grid lg:grid-cols-2 items-start gap-10 z-10">
-        <div class="space-y-4">
-          <p class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-brand/10 rounded-full px-3 py-1">
-            Fretamento seguro em Jundia&iacute; e regi&atilde;o</p>
-          <h1 class="text-4xl md:text-5xl font-bold leading-tight">Fretamento de mudan&ccedil;as com seguran&ccedil;a
-            e pontualidade</h1>
-          <p class="text-lg text-ink/80 max-w-2xl">Atendemos Jundia&iacute; e regi&atilde;o com equipe especializada,
-            ve&iacute;culos preparados e atendimento r&aacute;pido para sua mudan&ccedil;a residencial ou comercial.
-          </p>
-        </div>
-        <div class="space-y-5">
-          <div class="rounded-2xl border border-brand/20 bg-white/90 backdrop-blur shadow-lg p-6 space-y-4">
-            <div
-              class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-white rounded-full px-3 py-1 border border-brand/20">
-              Planejado do in&iacute;cio ao fim
-            </div>
-            <h3 class="text-2xl font-bold">Transporte sem preocupa&ccedil;&atilde;o</h3>
-            <p class="text-ink/80">Equipe treinada e monitoramento para sua mudan&ccedil;a chegar no
-              hor&aacute;rio combinado.</p>
-            <a class="inline-flex items-center justify-center bg-white text-brand border border-brand/30 px-4 py-3 rounded-xl font-semibold hover:border-brand hover:text-ink transition w-full"
-              href="#orcamento">Quero or&ccedil;ar minha mudan&ccedil;a</a>
-          </div>
-          <ul class="space-y-3 text-ink/90">
-            <li class="flex items-start gap-3 text-lg">
-              <span aria-hidden="true">🛡️</span>
-              <span>Seguran&ccedil;a e cuidado em cada etapa</span>
-            </li>
-            <li class="flex items-start gap-3 text-lg">
-              <span aria-hidden="true">⏱️</span>
-              <span>Pontualidade e compromisso com prazos</span>
-            </li>
-            <li class="flex items-start gap-3 text-lg">
-              <span aria-hidden="true">📞</span>
-              <span>Suporte &aacute;gil via telefone e WhatsApp</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-        <section id="beneficios" class="py-14">
-      <div class="max-w-6xl mx-auto px-4 space-y-10">
-        <div class="space-y-3 text-center">
-          <p class="text-sm font-semibold text-brand">Por que escolher</p>
-          <h2 class="text-3xl md:text-4xl font-bold">Por que escolher a Zavatti Transportes?</h2>
-        </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-4 text-center">
-            <div
-              class="inline-flex items-center justify-center p-[1px] rounded-2xl bg-gradient-to-br from-brand via-brand/70 to-brand/40 shadow-[0_8px_24px_rgba(80,137,165,0.15)] mx-auto">
-              <div
-                class="inline-flex items-center justify-center w-14 h-14 rounded-[0.9rem] bg-white text-brand/90 border border-brand/20">
-                <span class="text-3xl leading-none" aria-hidden="true">🛡️</span>
-              </div>
-            </div>
-            <h3 class="text-xl font-semibold">Equipe especializada</h3>
-            <p class="text-ink/80">Profissionais experientes cuidando de cada item com aten&ccedil;&atilde;o e respeito.
-            </p>
-          </article>
-          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-4 text-center">
-            <div
-              class="inline-flex items-center justify-center p-[1px] rounded-2xl bg-gradient-to-br from-brand via-brand/70 to-brand/40 shadow-[0_8px_24px_rgba(80,137,165,0.15)] mx-auto">
-              <div
-                class="inline-flex items-center justify-center w-14 h-14 rounded-[0.9rem] bg-white text-brand/90 border border-brand/20">
-                <span class="text-3xl leading-none" aria-hidden="true">🚚</span>
-              </div>
-            </div>
-            <h3 class="text-xl font-semibold">Ve&iacute;culos preparados</h3>
-            <p class="text-ink/80">Frota equipada para mudan&ccedil;as residenciais e comerciais de todos os portes.</p>
-          </article>
-          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-4 text-center">
-            <div
-              class="inline-flex items-center justify-center p-[1px] rounded-2xl bg-gradient-to-br from-brand via-brand/70 to-brand/40 shadow-[0_8px_24px_rgba(80,137,165,0.15)] mx-auto">
-              <div
-                class="inline-flex items-center justify-center w-14 h-14 rounded-[0.9rem] bg-white text-brand/90 border border-brand/20">
-                <span class="text-3xl leading-none" aria-hidden="true">💬</span>
-              </div>
-            </div>
-            <h3 class="text-xl font-semibold">Atendimento personalizado</h3>
-            <p class="text-ink/80">Planejamento sob medida, com canais r&aacute;pidos para tirar d&uacute;vidas e
-              ajustar detalhes.</p>
-          </article>
-          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-4 text-center">
-            <div
-              class="inline-flex items-center justify-center p-[1px] rounded-2xl bg-gradient-to-br from-brand via-brand/70 to-brand/40 shadow-[0_8px_24px_rgba(80,137,165,0.15)] mx-auto">
-              <div
-                class="inline-flex items-center justify-center w-14 h-14 rounded-[0.9rem] bg-white text-brand/90 border border-brand/20">
-                <span class="text-3xl leading-none" aria-hidden="true">⏰</span>
-              </div>
-            </div>
-            <h3 class="text-xl font-semibold">Pontualidade garantida</h3>
-            <p class="text-ink/80">Compromisso com prazos para que sua mudan&ccedil;a aconte&ccedil;a sem imprevistos.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="como-funciona" class="py-14 bg-gray-50/70">
-      <div class="max-w-6xl mx-auto px-4 space-y-10">
-        <div class="space-y-2 text-center">
-          <p class="text-sm font-semibold text-brand">Passo a passo</p>
-          <h2 class="text-3xl md:text-4xl font-bold">Como funciona o fretamento de mudan&ccedil;as</h2>
-        </div>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3 text-center">
-            <span
-              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand text-white font-bold mx-auto">1</span>
-            <h3 class="text-xl font-semibold">Solicita&ccedil;&atilde;o de or&ccedil;amento</h3>
-            <p class="text-ink/80">Voc&ecirc; envia os detalhes da mudan&ccedil;a e nossos consultores retornam
-              rapidamente.</p>
-          </article>
-          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3 text-center">
-            <span
-              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand text-white font-bold mx-auto">2</span>
-            <h3 class="text-xl font-semibold">Avalia&ccedil;&atilde;o e alinhamento</h3>
-            <p class="text-ink/80">Definimos o plano de transporte, equipe necess&aacute;ria e a melhor data para
-              voc&ecirc;.</p>
-          </article>
-          <article class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3 text-center">
-            <span
-              class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand text-white font-bold mx-auto">3</span>
-            <h3 class="text-xl font-semibold">Transporte com seguran&ccedil;a</h3>
-            <p class="text-ink/80">Realizamos a coleta, prote&ccedil;&atilde;o e entrega da mudan&ccedil;a com
-              pontualidade.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="galeria" class="py-14">
-      <div class="max-w-6xl mx-auto px-4 space-y-10">
-        <div class="space-y-3 text-center">
-          <p class="text-sm font-semibold text-brand">Nossos trabalhos</p>
-          <h2 class="text-3xl md:text-4xl font-bold">Galeria de mudan&ccedil;as</h2>
-          <p class="text-ink/80 max-w-2xl mx-auto">Confira alguns registros do nosso dia a dia em Jundia&iacute; e
-            regi&atilde;o.</p>
-        </div>
-
-        <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-6">
-          <figure class="mb-4 sm:mb-6 break-inside-avoid">
-            <div class="overflow-hidden rounded-2xl border border-black/5 bg-gray-50 shadow-sm">
-              <img src="img/truck.jpg" alt="Caminh&atilde;o de mudan&ccedil;a em servi&ccedil;o" width="1600"
-                height="900" loading="lazy" decoding="async" class="block w-full h-auto">
-            </div>
-          </figure>
-
-          <figure class="mb-4 sm:mb-6 break-inside-avoid">
-            <div class="overflow-hidden rounded-2xl border border-black/5 bg-gray-50 shadow-sm">
-              <img src="img/back_truck.jpg" alt="Trabalho realizado: caminh&atilde;o carregado para mudan&ccedil;a"
-                width="900" height="1600" loading="lazy" decoding="async" class="block w-full h-auto">
-            </div>
-          </figure>
-
-          <figure class="mb-4 sm:mb-6 break-inside-avoid">
-            <div class="overflow-hidden rounded-2xl border border-black/5 bg-gray-50 shadow-sm">
-              <img src="img/back_truck_2.jpg" alt="Trabalho realizado: carga protegida e organizada" width="1600"
-                height="900" loading="lazy" decoding="async" class="block w-full h-auto">
-            </div>
-          </figure>
-
-          <figure class="mb-4 sm:mb-6 break-inside-avoid">
-            <div class="overflow-hidden rounded-2xl border border-black/5 bg-gray-50 shadow-sm">
-              <img src="img/team_work.jpg" alt="Equipe em a&ccedil;&atilde;o durante a mudan&ccedil;a" width="1200"
-                height="1600" loading="lazy" decoding="async" class="block w-full h-auto">
-            </div>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="orcamento" class="py-14">
+  <body
+    class="font-sans text-ink bg-gradient-to-b from-white via-sky to-brand/5 antialiased"
+  >
+    <header
+      class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-black/5 shadow-sm"
+    >
       <div class="max-w-6xl mx-auto px-4">
         <div
-          class="relative overflow-hidden rounded-3xl border border-brand/20 bg-gradient-to-br from-white via-sky to-brand/10 shadow-lg">
-          <div aria-hidden="true"
-            class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand/20 blur-3xl"></div>
-          <div aria-hidden="true"
-            class="pointer-events-none absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-brand/10 blur-3xl"></div>
+          class="relative flex items-center justify-between py-4 gap-3 sm:gap-4"
+        >
+          <a
+            href="#inicio"
+            class="flex items-center gap-3 text-lg font-bold tracking-tight hover:text-brand transition"
+          >
+            <img
+              src="img/logo.png"
+              alt="Zavatti Transportes"
+              class="h-12 w-auto"
+            />
+            <span class="sr-only">Zavatti Transportes</span>
+          </a>
+          <button
+            id="menuToggle"
+            class="sm:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-black/10 bg-white text-ink shadow-sm hover:bg-brand/10 transition"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            type="button"
+          >
+            <svg
+              data-icon="open"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              data-icon="close"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <nav
+            id="navLinks"
+            class="absolute left-0 right-0 top-full z-30 flex flex-col sm:relative sm:left-auto sm:right-auto sm:top-auto sm:z-auto sm:flex-row flex-wrap sm:flex-nowrap gap-2 text-sm font-semibold text-ink/80 w-full sm:w-auto sm:ml-auto transition-all duration-200 ease-out origin-top max-h-0 overflow-hidden opacity-0 -translate-y-2 pointer-events-none sm:max-h-none sm:opacity-100 sm:translate-y-0 sm:pointer-events-auto sm:bg-transparent"
+          >
+            <a
+              class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
+              href="#inicio"
+              >In&iacute;cio</a
+            >
+            <a
+              class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
+              href="#beneficios"
+              >Benef&iacute;cios</a
+            >
+            <a
+              class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
+              href="#como-funciona"
+              >Como funciona</a
+            >
+            <a
+              class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
+              href="#galeria"
+              >Galeria</a
+            >
+            <a
+              class="px-3 py-2 rounded-lg hover:bg-brand/10 hover:text-ink w-full sm:w-auto text-center sm:text-left"
+              href="#orcamento"
+              >Contato</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
 
-          <div class="relative grid gap-8 lg:grid-cols-[1fr_0.9fr] items-center p-6 sm:p-10">
-            <div class="space-y-5">
-              <p
-                class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-brand/10 rounded-full px-3 py-1 w-fit">
-                Or&ccedil;amento r&aacute;pido</p>
-              <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-left">Pe&ccedil;a seu or&ccedil;amento em
-                minutos</h2>
-              <p class="text-ink/80 max-w-xl">Fale com a gente pelo WhatsApp e receba um atendimento &aacute;gil para
-                agendar e tirar d&uacute;vidas.</p>
+    <main>
+      <section
+        id="inicio"
+        class="relative overflow-hidden bg-gradient-to-br from-brand/10 via-white to-brand/5 pt-20 pb-16"
+      >
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 bg-[url('img/truck.jpg')] bg-cover bg-center opacity-40"
+        ></div>
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-brand/10"
+        ></div>
+        <div
+          class="relative max-w-6xl mx-auto px-4 grid lg:grid-cols-2 items-start gap-10 z-10"
+        >
+          <div class="space-y-4">
+            <p
+              class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-brand/10 rounded-full px-3 py-1"
+            >
+              Fretamento seguro em todo o Brasil
+            </p>
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+              Fretamento de mudan&ccedil;as com seguran&ccedil;a e pontualidade
+            </h1>
+            <p class="text-lg text-ink/80 max-w-2xl">
+              Atendemos todo o Brasil com equipe especializada, ve&iacute;culos
+              preparados e atendimento r&aacute;pido para sua mudan&ccedil;a
+              residencial ou comercial.
+            </p>
+          </div>
+          <div class="space-y-5">
+            <div
+              class="rounded-2xl border border-brand/20 bg-white/90 backdrop-blur shadow-lg p-6 space-y-4"
+            >
+              <div
+                class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-white rounded-full px-3 py-1 border border-brand/20"
+              >
+                Planejado do in&iacute;cio ao fim
+              </div>
+              <h3 class="text-2xl font-bold">
+                Transporte sem preocupa&ccedil;&atilde;o
+              </h3>
+              <p class="text-ink/80">
+                Equipe treinada e monitoramento para sua mudan&ccedil;a chegar
+                no hor&aacute;rio combinado.
+              </p>
+              <a
+                class="inline-flex items-center justify-center bg-white text-brand border border-brand/30 px-4 py-3 rounded-xl font-semibold hover:border-brand hover:text-ink transition w-full"
+                href="#orcamento"
+                >Quero or&ccedil;ar minha mudan&ccedil;a</a
+              >
+            </div>
+            <ul class="space-y-3 text-ink/90">
+              <li class="flex items-start gap-3 text-lg">
+                <span aria-hidden="true">🛡️</span>
+                <span>Seguran&ccedil;a e cuidado em cada etapa</span>
+              </li>
+              <li class="flex items-start gap-3 text-lg">
+                <span aria-hidden="true">⏱️</span>
+                <span>Pontualidade e compromisso com prazos</span>
+              </li>
+              <li class="flex items-start gap-3 text-lg">
+                <span aria-hidden="true">📞</span>
+                <span>Suporte &aacute;gil via telefone e WhatsApp</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-              <div class="flex flex-col sm:flex-row gap-3">
-                <a class="inline-flex items-center justify-center gap-2 bg-brand text-white px-5 py-3 rounded-full text-base font-semibold shadow hover:bg-brand/90 transition"
-                  href="https://wa.me/5511947454234?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20mudan%C3%A7a"
-                  target="_blank" rel="noopener noreferrer">
-                  Chamar no WhatsApp
-                  <img src="img/whatsapp.png" alt="" class="h-6 w-6" loading="lazy" decoding="async">
-                </a>
-                <a class="inline-flex items-center justify-center bg-white text-ink border border-black/10 px-5 py-3 rounded-full text-base font-semibold shadow-sm hover:border-black/20 hover:bg-white/70 transition"
-                  href="tel:+5511947454234">
-                  Ligar agora
-                </a>
+      <section id="beneficios" class="py-14">
+        <div class="max-w-6xl mx-auto px-4 space-y-10">
+          <div class="space-y-3 text-center">
+            <p class="text-sm font-semibold text-brand">Por que escolher</p>
+            <h2 class="text-3xl md:text-4xl font-bold">
+              Por que escolher a Zavatti Transportes?
+            </h2>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <article
+              class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-4 text-center"
+            >
+              <div
+                class="inline-flex items-center justify-center p-[1px] rounded-2xl bg-gradient-to-br from-brand via-brand/70 to-brand/40 shadow-[0_8px_24px_rgba(80,137,165,0.15)] mx-auto"
+              >
+                <div
+                  class="inline-flex items-center justify-center w-14 h-14 rounded-[0.9rem] bg-white text-brand/90 border border-brand/20"
+                >
+                  <span class="text-3xl leading-none" aria-hidden="true"
+                    >🛡️</span
+                  >
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold">Equipe especializada</h3>
+              <p class="text-ink/80">
+                Profissionais experientes cuidando de cada item com
+                aten&ccedil;&atilde;o e respeito.
+              </p>
+            </article>
+            <article
+              class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-4 text-center"
+            >
+              <div
+                class="inline-flex items-center justify-center p-[1px] rounded-2xl bg-gradient-to-br from-brand via-brand/70 to-brand/40 shadow-[0_8px_24px_rgba(80,137,165,0.15)] mx-auto"
+              >
+                <div
+                  class="inline-flex items-center justify-center w-14 h-14 rounded-[0.9rem] bg-white text-brand/90 border border-brand/20"
+                >
+                  <span class="text-3xl leading-none" aria-hidden="true"
+                    >🚚</span
+                  >
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold">Ve&iacute;culos preparados</h3>
+              <p class="text-ink/80">
+                Frota equipada para mudan&ccedil;as residenciais e comerciais de
+                todos os portes.
+              </p>
+            </article>
+            <article
+              class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-4 text-center"
+            >
+              <div
+                class="inline-flex items-center justify-center p-[1px] rounded-2xl bg-gradient-to-br from-brand via-brand/70 to-brand/40 shadow-[0_8px_24px_rgba(80,137,165,0.15)] mx-auto"
+              >
+                <div
+                  class="inline-flex items-center justify-center w-14 h-14 rounded-[0.9rem] bg-white text-brand/90 border border-brand/20"
+                >
+                  <span class="text-3xl leading-none" aria-hidden="true"
+                    >💬</span
+                  >
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold">Atendimento personalizado</h3>
+              <p class="text-ink/80">
+                Planejamento sob medida, com canais r&aacute;pidos para tirar
+                d&uacute;vidas e ajustar detalhes.
+              </p>
+            </article>
+            <article
+              class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-4 text-center"
+            >
+              <div
+                class="inline-flex items-center justify-center p-[1px] rounded-2xl bg-gradient-to-br from-brand via-brand/70 to-brand/40 shadow-[0_8px_24px_rgba(80,137,165,0.15)] mx-auto"
+              >
+                <div
+                  class="inline-flex items-center justify-center w-14 h-14 rounded-[0.9rem] bg-white text-brand/90 border border-brand/20"
+                >
+                  <span class="text-3xl leading-none" aria-hidden="true"
+                    >⏰</span
+                  >
+                </div>
+              </div>
+              <h3 class="text-xl font-semibold">Pontualidade garantida</h3>
+              <p class="text-ink/80">
+                Compromisso com prazos para que sua mudan&ccedil;a
+                aconte&ccedil;a sem imprevistos.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="py-14 bg-gray-50/70">
+        <div class="max-w-6xl mx-auto px-4 space-y-10">
+          <div class="space-y-2 text-center">
+            <p class="text-sm font-semibold text-brand">Passo a passo</p>
+            <h2 class="text-3xl md:text-4xl font-bold">
+              Como funciona o fretamento de mudan&ccedil;as
+            </h2>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <article
+              class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3 text-center"
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand text-white font-bold mx-auto"
+                >1</span
+              >
+              <h3 class="text-xl font-semibold">
+                Solicita&ccedil;&atilde;o de or&ccedil;amento
+              </h3>
+              <p class="text-ink/80">
+                Voc&ecirc; envia os detalhes da mudan&ccedil;a e nossos
+                consultores retornam rapidamente.
+              </p>
+            </article>
+            <article
+              class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3 text-center"
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand text-white font-bold mx-auto"
+                >2</span
+              >
+              <h3 class="text-xl font-semibold">
+                Avalia&ccedil;&atilde;o e alinhamento
+              </h3>
+              <p class="text-ink/80">
+                Definimos o plano de transporte, equipe necess&aacute;ria e a
+                melhor data para voc&ecirc;.
+              </p>
+            </article>
+            <article
+              class="rounded-2xl border border-black/5 shadow-sm p-5 bg-white space-y-3 text-center"
+            >
+              <span
+                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand text-white font-bold mx-auto"
+                >3</span
+              >
+              <h3 class="text-xl font-semibold">
+                Transporte com seguran&ccedil;a
+              </h3>
+              <p class="text-ink/80">
+                Realizamos a coleta, prote&ccedil;&atilde;o e entrega da
+                mudan&ccedil;a com pontualidade.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" class="py-14">
+        <div class="max-w-6xl mx-auto px-4 space-y-10">
+          <div class="space-y-3 text-center">
+            <p class="text-sm font-semibold text-brand">Nossos trabalhos</p>
+            <h2 class="text-3xl md:text-4xl font-bold">
+              Galeria de mudan&ccedil;as
+            </h2>
+            <p class="text-ink/80 max-w-2xl mx-auto">
+              Confira alguns registros do nosso dia a dia em Jundia&iacute; e
+              regi&atilde;o.
+            </p>
+          </div>
+
+          <div class="columns-1 sm:columns-2 lg:columns-3 gap-4 sm:gap-6">
+            <figure class="mb-4 sm:mb-6 break-inside-avoid">
+              <div
+                class="overflow-hidden rounded-2xl border border-black/5 bg-gray-50 shadow-sm"
+              >
+                <img
+                  src="img/truck.jpg"
+                  alt="Caminh&atilde;o de mudan&ccedil;a em servi&ccedil;o"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                  class="block w-full h-auto"
+                />
+              </div>
+            </figure>
+
+            <figure class="mb-4 sm:mb-6 break-inside-avoid">
+              <div
+                class="overflow-hidden rounded-2xl border border-black/5 bg-gray-50 shadow-sm"
+              >
+                <img
+                  src="img/back_truck.jpg"
+                  alt="Trabalho realizado: caminh&atilde;o carregado para mudan&ccedil;a"
+                  width="900"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                  class="block w-full h-auto"
+                />
+              </div>
+            </figure>
+
+            <figure class="mb-4 sm:mb-6 break-inside-avoid">
+              <div
+                class="overflow-hidden rounded-2xl border border-black/5 bg-gray-50 shadow-sm"
+              >
+                <img
+                  src="img/back_truck_2.jpg"
+                  alt="Trabalho realizado: carga protegida e organizada"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                  class="block w-full h-auto"
+                />
+              </div>
+            </figure>
+
+            <figure class="mb-4 sm:mb-6 break-inside-avoid">
+              <div
+                class="overflow-hidden rounded-2xl border border-black/5 bg-gray-50 shadow-sm"
+              >
+                <img
+                  src="img/team_work.jpg"
+                  alt="Equipe em a&ccedil;&atilde;o durante a mudan&ccedil;a"
+                  width="1200"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                  class="block w-full h-auto"
+                />
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="orcamento" class="py-14">
+        <div class="max-w-6xl mx-auto px-4">
+          <div
+            class="relative overflow-hidden rounded-3xl border border-brand/20 bg-gradient-to-br from-white via-sky to-brand/10 shadow-lg"
+          >
+            <div
+              aria-hidden="true"
+              class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-brand/20 blur-3xl"
+            ></div>
+            <div
+              aria-hidden="true"
+              class="pointer-events-none absolute -left-24 -bottom-24 h-72 w-72 rounded-full bg-brand/10 blur-3xl"
+            ></div>
+
+            <div
+              class="relative grid gap-8 lg:grid-cols-[1fr_0.9fr] items-center p-6 sm:p-10"
+            >
+              <div class="space-y-5">
+                <p
+                  class="inline-flex items-center gap-2 text-sm font-semibold text-brand bg-brand/10 rounded-full px-3 py-1 w-fit"
+                >
+                  Or&ccedil;amento r&aacute;pido
+                </p>
+                <h2
+                  class="text-3xl md:text-4xl font-bold tracking-tight text-left"
+                >
+                  Pe&ccedil;a seu or&ccedil;amento em minutos
+                </h2>
+                <p class="text-ink/80 max-w-xl">
+                  Fale com a gente pelo WhatsApp e receba um atendimento
+                  &aacute;gil para agendar e tirar d&uacute;vidas.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <a
+                    class="inline-flex items-center justify-center gap-2 bg-brand text-white px-5 py-3 rounded-full text-base font-semibold shadow hover:bg-brand/90 transition"
+                    href="https://wa.me/5511947454234?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20mudan%C3%A7a"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Chamar no WhatsApp
+                    <img
+                      src="img/whatsapp.png"
+                      alt=""
+                      class="h-6 w-6"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </a>
+                  <a
+                    class="inline-flex items-center justify-center bg-white text-ink border border-black/10 px-5 py-3 rounded-full text-base font-semibold shadow-sm hover:border-black/20 hover:bg-white/70 transition"
+                    href="tel:+5511947454234"
+                  >
+                    Ligar agora
+                  </a>
+                </div>
+
+                <p class="text-sm text-ink/70">
+                  Atendimento em todo o Brasil !!
+                </p>
               </div>
 
-              <p class="text-sm text-ink/70">Atendimento em todo o Brasil !!</p>
-            </div>
-
-            <div class="relative">
-              <div class="rounded-3xl border border-black/5 bg-white/70 backdrop-blur p-4 shadow-sm">
-                <img src="img/cta_truck.png" alt="Caminh&atilde;o de mudan&ccedil;a Zavatti" width="1536" height="1024"
-                  loading="lazy" decoding="async" class="w-full h-auto rounded-2xl">
+              <div class="relative">
+                <div
+                  class="rounded-3xl border border-black/5 bg-white/70 backdrop-blur p-4 shadow-sm"
+                >
+                  <img
+                    src="img/cta_truck.png"
+                    alt="Caminh&atilde;o de mudan&ccedil;a Zavatti"
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full h-auto rounded-2xl"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <footer class="bg-brand py-10">
+      <div
+        class="max-w-6xl mx-auto px-4 grid gap-6 md:grid-cols-3 text-sm text-white/80"
+      >
+        <div class="space-y-2">
+          <h3 class="text-lg font-bold text-white">Zavatti Transportes</h3>
+          <p>
+            Fretamento de mudan&ccedil;as residenciais e comerciais com
+            seguran&ccedil;a e pontualidade.
+          </p>
+        </div>
+        <div class="space-y-2">
+          <h4 class="text-base font-semibold text-white">Contato</h4>
+          <p>Telefone/WhatsApp: +55 11 94745-4234</p>
+          <p>E-mail: rogério78@gmail.com</p>
+          <p>Atendimento em Jundia&iacute; e regi&atilde;o</p>
+        </div>
+        <div class="space-y-2">
+          <h4 class="text-base font-semibold text-white">Direitos</h4>
+          <p>
+            &copy; <span id="year"></span> Zavatti Transportes. Todos os
+            direitos reservados.
+          </p>
+        </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="bg-brand py-10">
-    <div class="max-w-6xl mx-auto px-4 grid gap-6 md:grid-cols-3 text-sm text-white/80">
-      <div class="space-y-2">
-        <h3 class="text-lg font-bold text-white">Zavatti Transportes</h3>
-        <p>Fretamento de mudan&ccedil;as residenciais e comerciais com seguran&ccedil;a e pontualidade.</p>
-      </div>
-      <div class="space-y-2">
-        <h4 class="text-base font-semibold text-white">Contato</h4>
-        <p>Telefone/WhatsApp: +55 11 94745-4234</p>
-        <p>E-mail: rogério78@gmail.com</p>
-        <p>Atendimento em Jundia&iacute; e regi&atilde;o</p>
-      </div>
-      <div class="space-y-2">
-        <h4 class="text-base font-semibold text-white">Direitos</h4>
-        <p>&copy; <span id="year"></span> Zavatti Transportes. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </footer>
+    <a
+      class="fixed right-6 bottom-6 inline-flex items-center justify-center gap-2 bg-brand text-white px-5 py-3 rounded-full text-sm font-semibold shadow-lg hover:bg-brand/90 transition z-50"
+      href="https://wa.me/5511947454234?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20mudan%C3%A7a"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Pedir or&ccedil;amento
+      <img src="img/whatsapp.png" alt="" class="h-8 w-8" />
+    </a>
 
-  <a class="fixed right-6 bottom-6 inline-flex items-center justify-center gap-2 bg-brand text-white px-5 py-3 rounded-full text-sm font-semibold shadow-lg hover:bg-brand/90 transition z-50"
-    href="https://wa.me/5511947454234?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20de%20mudan%C3%A7a" target="_blank" rel="noopener noreferrer">
-    Pedir or&ccedil;amento
-    <img src="img/whatsapp.png" alt="" class="h-8 w-8">
-  </a>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+      const openIcon = menuToggle?.querySelector('[data-icon="open"]');
+      const closeIcon = menuToggle?.querySelector('[data-icon="close"]');
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    const openIcon = menuToggle?.querySelector('[data-icon="open"]');
-    const closeIcon = menuToggle?.querySelector('[data-icon="close"]');
-
-    function closeMenu() {
-      navLinks.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto', 'max-h-96', 'border', 'border-black/5', 'shadow', 'bg-white', 'p-3');
-      navLinks.classList.add('opacity-0', '-translate-y-2', 'pointer-events-none', 'max-h-0', 'overflow-hidden');
-      openIcon?.classList.remove('hidden');
-      closeIcon?.classList.add('hidden');
-      menuToggle?.setAttribute('aria-expanded', 'false');
-    }
-
-    function openMenu() {
-      navLinks.classList.remove('opacity-0', '-translate-y-2', 'pointer-events-none', 'max-h-0', 'overflow-hidden');
-      navLinks.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto', 'max-h-96', 'border', 'border-black/5', 'shadow', 'bg-white', 'p-3');
-      openIcon?.classList.add('hidden');
-      closeIcon?.classList.remove('hidden');
-      menuToggle?.setAttribute('aria-expanded', 'true');
-    }
-
-    menuToggle?.addEventListener('click', () => {
-      const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
-      if (isOpen) {
-        closeMenu();
-      } else {
-        openMenu();
+      function closeMenu() {
+        navLinks.classList.remove(
+          "opacity-100",
+          "translate-y-0",
+          "pointer-events-auto",
+          "max-h-96",
+          "border",
+          "border-black/5",
+          "shadow",
+          "bg-white",
+          "p-3",
+        );
+        navLinks.classList.add(
+          "opacity-0",
+          "-translate-y-2",
+          "pointer-events-none",
+          "max-h-0",
+          "overflow-hidden",
+        );
+        openIcon?.classList.remove("hidden");
+        closeIcon?.classList.add("hidden");
+        menuToggle?.setAttribute("aria-expanded", "false");
       }
-    });
 
-    // Fecha ao redimensionar para desktop
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 640) {
-        closeMenu();
+      function openMenu() {
+        navLinks.classList.remove(
+          "opacity-0",
+          "-translate-y-2",
+          "pointer-events-none",
+          "max-h-0",
+          "overflow-hidden",
+        );
+        navLinks.classList.add(
+          "opacity-100",
+          "translate-y-0",
+          "pointer-events-auto",
+          "max-h-96",
+          "border",
+          "border-black/5",
+          "shadow",
+          "bg-white",
+          "p-3",
+        );
+        openIcon?.classList.add("hidden");
+        closeIcon?.classList.remove("hidden");
+        menuToggle?.setAttribute("aria-expanded", "true");
       }
-    });
 
-  </script>
-</body>
+      menuToggle?.addEventListener("click", () => {
+        const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
 
+      // Fecha ao redimensionar para desktop
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 640) {
+          closeMenu();
+        }
+      });
+    </script>
+  </body>
 </html>
